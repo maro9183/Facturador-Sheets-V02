@@ -1,0 +1,668 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="970,2297" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugas="clr-namespace:UiPath.GSuite.Activities.Sheets;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.GSuite.Activities.Contracts</x:String>
+      <x:String>UiPath.GSuite.Sheets.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Persistence.Activities.ExternalTask</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.BaseTask</x:String>
+      <x:String>UiPath.Persistence.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="856,2232" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="Datos" />
+      <Variable x:TypeArguments="x:Object" Name="_out_InputDialog_1__Result" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="marianomuracegas@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="794,2121" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="Browse" SpreadsheetId="https://docs.google.com/spreadsheets/d/1yGVj4dgIChoH8fXcrbXi5CmTmaP6qM15ImPg0OudTBE/edit?usp=drivesdk" SpreadsheetName="Nuevo" UseConnectionService="False" UserEmail="marianomuracegas@gmail.com">
+      <ugas:GoogleSheetsApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="760,1840" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uga:ReadRange ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="698,217" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[Datos]" SheetName="NewSheet">
+              <uga:ReadRange.Range>
+                <InArgument x:TypeArguments="x:String" />
+              </uga:ReadRange.Range>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uga:ReadRange>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="698,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[Datos]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Datos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="698,1291" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="664,1105" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="622,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[CurrentRow(&quot;Nombre de Archivo&quot;)]" />
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: RCEL" sap:VirtualizedContainerService.HintSize="622,836" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="588,579" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[CurrentRow(&quot;Facturar&quot;).ToString = &quot;NO&quot;]" sap:VirtualizedContainerService.HintSize="526,464" sap2010:WorkflowViewState.IdRef="If_7">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Continue sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="492,169" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generar Comprobantes'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/menu_ppal.jsp" CvTextArea="587, 357, 125, 13" CvTextArgument="Generar Comprobantes" CvType="Text" DesignTimeRectangle="565, 353, 250, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Generar Comprobantes'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl class='ui-button-text' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl class='ui-button-text' type='' tag='SPAN' aaname='Generar Comprobantes' check:innerText='Generar Comprobantes' /&gt;" Guid="517a75b1-331b-43f0-9c5f-c6951861a7f5" InformativeScreenshot="00fa6c67605d5597adf079c2cc71024d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NSelectItem DisplayName="Seleccionar elemento 'Punto de'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[&quot;*&quot;+CurrentRow(&quot;Pto de Venta&quot;).ToString+&quot;*&quot;]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="2">
+                                          <x:String>seleccionar...</x:String>
+                                          <x:String> 00001-30 1408 - La Plata Sudeste Calle 50 Ambas Veredas, Buenos Aires</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/buscarPtosVtas.do" CvTextArea="636, 350, 72, 13" CvTextArgument="seleccionar..." CvType="Text" DesignTimeRectangle="630, 346, 430, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'seleccionar...'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='puntodeventa' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='puntodeventa' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="ec3e2a91-4d66-46fc-92bc-7a3c6bc6423a" InformativeScreenshot="28c28d97c6ed70c1f191ad68c41b3310.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CvTextArea="476, 350, 147, 12" CvTextArgument="Punto de Ventas a utilizar" CvType="Text" DesignTimeRectangle="321, 345, 306, 24" ElementType="Text" FriendlyName="'Punto de'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='Punto de Ventas a utilizar' check:innerText='Punto de Ventas a utilizar' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NSelectItem DisplayName="Seleccionar elemento 'Factura C'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[&quot;*&quot;+CurrentRow(&quot;Tipo de comprobante&quot;).ToString+&quot;*&quot;]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="7">
+                                          <x:String>Factura C</x:String>
+                                          <x:String>Nota de Débito C</x:String>
+                                          <x:String>Nota de Crédito C</x:String>
+                                          <x:String>Recibo C</x:String>
+                                          <x:String>Factura de Crédito Electrónica MiPyMEs (FCE) C</x:String>
+                                          <x:String>Nota de Débito Electrónica MiPyMEs (FCE) C</x:String>
+                                          <x:String>Nota de Crédito Electrónica MiPyMEs (FCE) C</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/buscarPtosVtas.do" CvTextArea="637, 328, 54, 13" CvTextArgument="Factura C" CvType="Text" DesignTimeRectangle="630, 376, 294, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Factura C'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='universocomprobante' tableRow='3' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='universocomprobante' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="6f2e286c-bc8c-4383-8a44-be068e8bb8c6" ImageBase64="" InformativeScreenshot="192fdae53580206c45944c5cf8d86b11.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continuar &gt;'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/buscarPtosVtas.do" CvElementArea="682, 412, 81, 22" CvTextArea="690, 415, 64, 13" CvTextArgument="Continuar &gt;" CvType="Button" DesignTimeRectangle="683, 413, 78, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continuar &gt;'" FullSelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' tag='INPUT' type='button' class='' check:text='Continuar &amp;gt;' /&gt;" Guid="f015602e-e2ee-4489-9735-0fc519bb3482" InformativeScreenshot="1a3f44f8c1cb101a2e8f6399165fe742.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fecha del Comprobante'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Fecha&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosEmisor.do" CvElementArea="680, 336, 102, 22" CvType="InputBox" DesignTimeRectangle="681, 337, 101, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'15/12/2023'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='fc' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='fc' type='text' tag='INPUT' class='' aaname='Fecha del Comprobante' /&gt;" Guid="6fecf641-5f31-46e8-83f7-52f35e0259e2" InformativeScreenshot="50193ecab6d52a6e340f5e7eb3a5d53a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CvTextArea="535, 340, 139, 14" CvTextArgument="Fecha del Comprobante" CvType="Text" DesignTimeRectangle="536, 340, 137, 14" ElementType="Text" FriendlyName="'Fecha del Comprobante'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl aaname='Fecha del Comprobante' tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl aaname='Fecha del Comprobante' type='' tag='LABEL' class='' check:innerText='Fecha del Comprobante' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NSelectItem DisplayName="Seleccionar elemento 'Conceptos a incluír'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[&quot;?&quot; + CurrentRow(&quot;Concepto&quot;).ToString]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="4">
+                                          <x:String>seleccionar...</x:String>
+                                          <x:String> Productos</x:String>
+                                          <x:String> Servicios</x:String>
+                                          <x:String> Productos y Servicios</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosEmisor.do" CvTextArea="688, 376, 71, 13" CvTextArgument="seleccionar..." CvType="Text" DesignTimeRectangle="681, 372, 149, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'seleccionar...'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='idconcepto' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl id='idconcepto' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="10ad65a5-6931-4c93-97fd-de3c7f8fa727" InformativeScreenshot="2074c9b2260c419d95b8f9dbb360bbb7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CvTextArea="560, 375, 114, 15" CvTextArgument="Conceptos a incluir" CvType="Text" DesignTimeRectangle="434, 371, 244, 24" ElementType="Text" FriendlyName="'Conceptos a incluír'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl parentid='contenido' tableRow='2' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl parentid='contenido' type='' tag='TH' class='' aaname='Conceptos a incluír' check:innerText='Conceptos a incluír' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Ingresar DESDE factura" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Desde&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosEmisor.do" CvElementArea="692, 393, 94, 21" CvType="InputBox" DesignTimeRectangle="693, 394, 94, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'15/12/2023'" FullSelectorArgument="&lt;webctrl id='tablaperiodo' tableRow='8' tag='TABLE' /&gt;&lt;webctrl id='fsd' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablaperiodo' tag='TABLE' /&gt;&lt;webctrl id='fsd' type='text' tag='INPUT' class='' aaname='Desde' /&gt;" Guid="42eb5123-2db9-4a48-83cb-41c16850dd6d" InformativeScreenshot="4c7a5b5605d31b2d44d53e4b3ffa06a7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Ingresar fecha HASTA factura" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Hasta&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosEmisor.do" CvElementArea="692, 421, 94, 22" CvType="InputBox" DesignTimeRectangle="693, 422, 94, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'15/12/2023'" FullSelectorArgument="&lt;webctrl id='tablaperiodo' tableRow='8' tag='TABLE' /&gt;&lt;webctrl id='fsh' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablaperiodo' tag='TABLE' /&gt;&lt;webctrl id='fsh' type='text' tag='INPUT' class='' aaname='Hasta' /&gt;" Guid="fd952232-4286-4e9d-b525-1e38da49c6c5" InformativeScreenshot="d64333c5d3dbefcfeb2ca54472db46f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Ingresar Vencimiento Factura" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Vencimiento&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosEmisor.do" CvElementArea="692, 449, 95, 21" CvType="InputBox" DesignTimeRectangle="693, 450, 94, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'15/12/2023'" FullSelectorArgument="&lt;webctrl id='tablaperiodo' tableRow='8' tag='TABLE' /&gt;&lt;webctrl id='vencimientopago' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablaperiodo' tag='TABLE' /&gt;&lt;webctrl id='vencimientopago' type='text' tag='INPUT' class='' aaname='Vto. para el Pago' /&gt;" Guid="89ab8f64-decb-4f85-bf66-932881515af3" InformativeScreenshot="45e50e8be200a71d66d1ca3776014d53.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continuar &gt;'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosEmisor.do" CvElementArea="674, 609, 80, 22" CvTextArea="682, 613, 63, 12" CvTextArgument="Continuar &gt;" CvType="Button" DesignTimeRectangle="675, 610, 78, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continuar &gt;'" FullSelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='contenido' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='contenido' tag='INPUT' type='button' class='' check:text='Continuar &amp;gt;' /&gt;" Guid="ca2ed791-65b5-46fd-bfb9-9cd7ee020775" InformativeScreenshot="a49594a1cce874ec4be452e54cbe2d1a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NSelectItem DisplayName="Seleccionar elemento 'seleccionar...'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[&quot;*&quot;+CurrentRow(&quot;Condición IVA&quot;).ToString+&quot;*&quot;]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="12">
+                                          <x:String>seleccionar...</x:String>
+                                          <x:String> IVA Responsable Inscripto</x:String>
+                                          <x:String> IVA Sujeto Exento</x:String>
+                                          <x:String> Consumidor Final</x:String>
+                                          <x:String> Responsable Monotributo</x:String>
+                                          <x:String> Sujeto No Categorizado</x:String>
+                                          <x:String> Proveedor del Exterior</x:String>
+                                          <x:String> Cliente del Exterior</x:String>
+                                          <x:String> IVA Liberado - Ley Nº 19.640</x:String>
+                                          <x:String> Monotributista Social</x:String>
+                                          <x:String> IVA No Alcanzado</x:String>
+                                          <x:String> Monotributista Trabajador Independiente Promovido</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvTextArea="596, 288, 71, 13" CvTextArgument="seleccionar..." CvType="Text" DesignTimeRectangle="589, 336, 250, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'seleccionar...'" FullSelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='idivareceptor' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='idivareceptor' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="274bcfe0-2056-408b-a103-20ab8255999e" ImageBase64="" InformativeScreenshot="afed8782c61c84f63fd22073a5e5e84c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NSelectItem DisplayName="Seleccionar elemento 'Tipo y Nro. de Documento'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="[&quot;*&quot;+CurrentRow(&quot;Tipo CUIT&quot;).ToString+&quot;*&quot;]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="10">
+                                          <x:String>CUIT</x:String>
+                                          <x:String>CUIL</x:String>
+                                          <x:String>CDI</x:String>
+                                          <x:String>LE</x:String>
+                                          <x:String>LC</x:String>
+                                          <x:String>CI Extranjera</x:String>
+                                          <x:String>DNI</x:String>
+                                          <x:String>Pasaporte</x:String>
+                                          <x:String>CI Policía Federal</x:String>
+                                          <x:String>Certificado de Migración</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvTextArea="596, 366, 30, 12" CvTextArgument="CUIT" CvType="Text" DesignTimeRectangle="589, 362, 138, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'CUIT'" FullSelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='idtipodocreceptor' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='idtipodocreceptor' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="523361a4-0026-4527-93b2-60ecc52d9297" InformativeScreenshot="fb2e23ae62da32c9b78382d76bc529bd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CvTextArea="430, 366, 152, 14" CvTextArgument="Tipo y Nro. de Documento" CvType="Text" DesignTimeRectangle="417, 361, 169, 24" ElementType="Text" FriendlyName="'Tipo y Nro. de Documento'" FullSelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='Tipo y Nro. de Documento' check:innerText='Tipo y Nro. de Documento' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT nrodocreceptor'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;CUIT&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="730, 362, 108, 21" CvType="InputBox" DesignTimeRectangle="731, 363, 106, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT nrodocreceptor'" FullSelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='nrodocreceptor' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='nrodocreceptor' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="584afccc-3167-4fe4-955b-01074cbf0de4" InformativeScreenshot="83304a3a65b18b0e5ff7b80dc96fee3a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Condiciones de Venta'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" DesignTimeRectangle="437, 483, 491, 47" DesignTimeScaleFactor="1" FriendlyName="'Condiciones de Venta'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='tituloformadepago' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='tituloformadepago' type='' tag='TD' class='jig_subtitulo_seccion' aaname='Condiciones de Venta' check:innerText='Condiciones de Venta' /&gt;" Guid="9fd98e90-0929-45e5-9482-e481aace6811" InformativeScreenshot="5df8be866e3f798081ab596e68917045.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <If Condition="[CurrentRow(&quot;Medio de Pago&quot;).ToString = &quot;Cuenta Corriente&quot;]" sap:VirtualizedContainerService.HintSize="577,427" sap2010:WorkflowViewState.IdRef="If_6">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="455, 255, 15, 15" CvType="CheckBox" DesignTimeRectangle="456, 256, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago4' tableRow='7' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago4' type='checkbox' tag='INPUT' class='' aaname='Cuenta Corriente' /&gt;" Guid="8fca9a15-94b7-4597-a7f3-b38ed21fd32e" InformativeScreenshot="feccb8526f10b0ff33049a7d733261aa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CvTextArea="470, 258, 100, 12" CvTextArgument="Cuenta Corriente" CvType="Text" DesignTimeRectangle="472, 258, 97, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Cuenta Corriente' check:innerText='Cuenta Corriente' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[CurrentRow(&quot;Medio de Pago&quot;).ToString = &quot;Tarjeta de crédito&quot;]" sap:VirtualizedContainerService.HintSize="577,882" sap2010:WorkflowViewState.IdRef="If_5">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,700" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="455, 558, 15, 15" CvType="CheckBox" DesignTimeRectangle="456, 559, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago3' tableRow='6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago3' type='checkbox' tag='INPUT' class='' aaname='Tarjeta de Crédito' /&gt;" Guid="3022d60f-bb99-4921-9445-4025880b4ea0" InformativeScreenshot="25ada96b01698aa9f9fcd0781f17b8b4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CvTextArea="470, 560, 104, 15" CvTextArgument="Tarjeta de Credito" CvType="Text" DesignTimeRectangle="472, 561, 101, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Tarjeta de Crédito' check:innerText='Tarjeta de Crédito' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NSelectItem DisplayName="Seleccionar elemento 'seleccionar...'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="[&quot;*&quot;+CurrentRow(&quot;Tipo tarjeta&quot;).ToString+&quot;*&quot;]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NSelectItem.Items>
+                                              <scg:List x:TypeArguments="x:String" Capacity="11">
+                                                <x:String>seleccionar...</x:String>
+                                                <x:String> American Express</x:String>
+                                                <x:String> Visa</x:String>
+                                                <x:String> Mastercard</x:String>
+                                                <x:String> Credencial</x:String>
+                                                <x:String> Carta Franca</x:String>
+                                                <x:String> Cabal</x:String>
+                                                <x:String> Diners</x:String>
+                                                <x:String> Tarjeta Shopping</x:String>
+                                                <x:String> Tarjeta Naranja</x:String>
+                                                <x:String> Otra...</x:String>
+                                              </scg:List>
+                                            </uix:NSelectItem.Items>
+                                            <uix:NSelectItem.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvTextArea="483, 532, 73, 13" CvTextArgument="seleccionar..." CvType="Text" DesignTimeRectangle="477, 528, 130, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'seleccionar...'" FullSelectorArgument="&lt;webctrl id='tablatarjetacredito' tableRow='5' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_id_tipo_credito1' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablatarjetacredito' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_id_tipo_credito1' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="82756339-a382-42b7-958a-b8369b8ef930" ImageBase64="" InformativeScreenshot="7b704e7a8fac0bc63a9066bf7fdce495.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                            </uix:NSelectItem.Target>
+                                          </uix:NSelectItem>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT tarjeta_nro_credi…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Número tarjeta&quot;).ToString]" Version="V3">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="608, 529, 159, 22" CvType="InputBox" DesignTimeRectangle="609, 530, 158, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT tarjeta_nro_credi…'" FullSelectorArgument="&lt;webctrl id='tablatarjetacredito' tableRow='5' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_nro_credito1' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablatarjetacredito' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_nro_credito1' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="1f693c71-8bda-4c09-bc6a-d795b6e1342a" InformativeScreenshot="099b2325ca8da8288f7a3a5cf8eff00e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NTypeInto.Target>
+                                          </uix:NTypeInto>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[CurrentRow(&quot;Medio de Pago&quot;).ToString = &quot;Tarjeta de débito&quot;]" sap:VirtualizedContainerService.HintSize="577,882" sap2010:WorkflowViewState.IdRef="If_4">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,700" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'checked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="454, 325, 17, 17" CvType="CheckBox" DesignTimeRectangle="456, 327, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago2' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago2' type='checkbox' tag='INPUT' class='' aaname='Tarjeta de Débito' /&gt;" Guid="ae603052-8210-4847-924d-5f1aef70cb4f" InformativeScreenshot="b70f682bcd476092ff9e993781b37249.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CvTextArea="473, 328, 96, 15" CvTextArgument="Tarjeta de Debito" CvType="Text" DesignTimeRectangle="472, 329, 96, 14" ElementType="Text" FriendlyName="'checked'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Tarjeta de Débito' check:innerText='Tarjeta de Débito' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NSelectItem DisplayName="Seleccionar elemento 'seleccionar...'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="[&quot;*&quot;+CurrentRow(&quot;Tipo tarjeta&quot;).ToString+&quot;*&quot;]" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NSelectItem.Items>
+                                              <scg:List x:TypeArguments="x:String" Capacity="5">
+                                                <x:String>seleccionar...</x:String>
+                                                <x:String> Maestro</x:String>
+                                                <x:String> Visa Electrón</x:String>
+                                                <x:String> Cabal 24 hs</x:String>
+                                                <x:String> Otra...</x:String>
+                                              </scg:List>
+                                            </uix:NSelectItem.Items>
+                                            <uix:NSelectItem.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvTextArea="483, 501, 73, 13" CvTextArgument="seleccionar..." CvType="Text" DesignTimeRectangle="477, 497, 130, 22" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'seleccionar...'" FullSelectorArgument="&lt;webctrl id='tablatarjetadebito' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_id_tipo_debito1' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablatarjetadebito' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_id_tipo_debito1' type='' tag='SELECT' class='' aaname='' /&gt;" Guid="68ea200b-c832-4eeb-be2c-c4ce6ae0f4cc" ImageBase64="" InformativeScreenshot="7151adf7596070cf10fed7acf35a0708.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                            </uix:NSelectItem.Target>
+                                          </uix:NSelectItem>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT tarjeta_nro_debit…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Número tarjeta&quot;).ToString]" Version="V3">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="608, 498, 159, 22" CvType="InputBox" DesignTimeRectangle="609, 499, 158, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT tarjeta_nro_debit…'" FullSelectorArgument="&lt;webctrl id='tablatarjetadebito' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_nro_debito1' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='tablatarjetadebito' tag='TABLE' /&gt;&lt;webctrl id='tarjeta_nro_debito1' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="d8ef696d-6ba8-4f28-af5e-aa0c8c6715a3" InformativeScreenshot="326c3dbc0f77b5c573c89d1323ed0981.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NTypeInto.Target>
+                                          </uix:NTypeInto>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[CurrentRow(&quot;Medio de Pago&quot;).ToString = &quot;Contado&quot;]" sap:VirtualizedContainerService.HintSize="577,427" sap2010:WorkflowViewState.IdRef="If_3">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="455, 239, 15, 15" CvType="CheckBox" DesignTimeRectangle="456, 240, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago1' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago1' type='checkbox' tag='INPUT' class='' aaname='Contado' /&gt;" Guid="dd3b9b9b-f593-46a2-b3d6-09b2b1100af9" InformativeScreenshot="3c58465898484bcebf55e02445c123cb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CvTextArea="470, 242, 51, 12" CvTextArgument="Contado" CvType="Text" DesignTimeRectangle="472, 242, 49, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Contado' check:innerText='Contado' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continuar &gt;'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="674, 709, 79, 22" CvTextArea="682, 713, 63, 12" CvTextArgument="Continuar &gt;" CvType="Button" DesignTimeRectangle="675, 710, 78, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continuar &gt;'" FullSelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='formulario' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='formulario' tag='INPUT' type='button' class='' check:text='Continuar &amp;gt;' /&gt;" Guid="269dd6a6-0727-46f5-9895-044195234447" InformativeScreenshot="f991d008c1b92bba832a5ee1f8bc553c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'TEXTAREA detalle_descri…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Descripción del servicio&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosOperacion.do" CvElementArea="371, 380, 211, 27" CvType="InputBox" DesignTimeRectangle="373, 381, 208, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'TEXTAREA detalle_descri…'" FullSelectorArgument="&lt;webctrl id='idoperacion' tag='TABLE' /&gt;&lt;webctrl id='detalle_descripcion1' tableRow='2' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl id='idoperacion' tag='TABLE' /&gt;&lt;webctrl id='detalle_descripcion1' type='' tag='TEXTAREA' class='soloTexto' aaname='' /&gt;" Guid="bd07560a-c77f-4b59-bd4b-7d3a3f520688" InformativeScreenshot="c71d99e9eccba2c56dfbc404a9f4cc61.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '1'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Unidades&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosOperacion.do" CvElementArea="592, 323, 60, 20" CvType="InputBox" DesignTimeRectangle="583, 377, 66, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl id='idoperacion' tag='TABLE' /&gt;&lt;webctrl id='detalle_cantidad1' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='idoperacion' tag='TABLE' /&gt;&lt;webctrl id='detalle_cantidad1' type='text' tag='INPUT' class='soloNumerosConDecimales' aaname='' /&gt;" Guid="a5942b14-5fa7-42d5-ab0e-1c9910cf3866" InformativeScreenshot="081f9c0e01d044e1a41c3248385b9ceb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '1300'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Precio unidad&quot;).ToString]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosOperacion.do" CvElementArea="703, 376, 82, 18" CvTextArea="788, 380, 8, 10" CvTextArgument="0" CvType="InputBox" DesignTimeRectangle="703, 377, 89, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'1300'" FullSelectorArgument="&lt;webctrl id='idoperacion' tag='TABLE' /&gt;&lt;webctrl id='detalle_precio1' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='idoperacion' tag='TABLE' /&gt;&lt;webctrl id='detalle_precio1' type='text' tag='INPUT' class='soloNumerosConDecimales' aaname='' /&gt;" Guid="283ff505-2888-4218-bccf-f3909f845b36" InformativeScreenshot="29b40b1e72a02aa601b1c9932ee2e0dd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continuar &gt;'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosOperacion.do" CvElementArea="674, 632, 80, 22" CvTextArea="682, 636, 63, 12" CvTextArgument="Continuar &gt;" CvType="Button" DesignTimeRectangle="675, 633, 78, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continuar &gt;'" FullSelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='contenido' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='contenido' tag='INPUT' type='button' class='' check:text='Continuar &amp;gt;' /&gt;" Guid="c247e80f-ec1e-4036-9d15-b59fe545d49d" InformativeScreenshot="5906dddbc4f55ab97f71cada27ab4146.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="577,292" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Se emitirá la factura. Desea continuar?" OptionsString="Si;No" Title="Atención">
+                                      <ui:InputDialog.Result>
+                                        <OutArgument x:TypeArguments="x:Object">[_out_InputDialog_1__Result]</OutArgument>
+                                      </ui:InputDialog.Result>
+                                    </ui:InputDialog>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[_out_InputDialog_1__Result]" />
+                                    <If Condition="[_out_InputDialog_1__Result.ToString = &quot;Si&quot;]" sap:VirtualizedContainerService.HintSize="577,1608" sap2010:WorkflowViewState.IdRef="If_1">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,1181" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Confirmar Datos...'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComResumenDatos.do" CvElementArea="637, 609, 153, 21" CvTextArea="664, 613, 98, 12" CvTextArgument="Confirmar Datos..." CvType="Button" DesignTimeRectangle="639, 610, 150, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Confirmar Datos...'" FullSelectorArgument="&lt;webctrl id='btngenerar' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='btngenerar' tag='INPUT' type='button' class='' aaname='Confirmar Datos...' check:text='Confirmar Datos...' /&gt;" Guid="badf65bd-1e16-4c4a-a8cf-1c94b4d09ef7" InformativeScreenshot="c3fa7b499a5e4310ab03581486c46afb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Aceptar'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable CvElementArea="714, 213, 94, 49" CvTextArea="737, 232, 49, 15" CvTextArgument="Aceptar" CvType="Button" DesignTimeRectangle="721, 219, 83, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Aceptar'" FullSelectorArgument="&lt;ctrl name='fe.afip.gob.ar dice' role='dialog' /&gt;&lt;ctrl name='Aceptar' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='fe.afip.gob.ar dice' role='dialog' /&gt;&lt;ctrl name='Aceptar' role='push button' automationid='' check:fulltext='Aceptar' /&gt;" Guid="8f5fd601-a168-4e3e-a9d8-14805bd635e7" InformativeScreenshot="0f56acf76aa3b1aa1c53bc38d8400886.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='RCEL - Google Chrome' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Imprimir...'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComResumenDatos.do" CvElementArea="606, 598, 153, 22" CvTextArea="653, 602, 58, 14" CvTextArgument="Imprimir..." CvType="Button" DesignTimeRectangle="608, 599, 150, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Imprimir...'" FullSelectorArgument="&lt;webctrl parentid='botones_comprobante' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='botones_comprobante' tag='INPUT' type='button' class='' aaname='Imprimir...' check:text='Imprimir...' /&gt;" Guid="0590c861-3980-4004-b1d9-8d0ad0c32ba8" InformativeScreenshot="813d9380b04e7ce9a9c3b1b93ebd9b32.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Menú Principal'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComResumenDatos.do" CvElementArea="634, 653, 97, 23" CvTextArea="642, 657, 81, 14" CvTextArgument="Menu Principal" CvType="Button" DesignTimeRectangle="635, 654, 95, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Menú Principal'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='' aaname='Menú Principal' check:text='Menú Principal' /&gt;" Guid="82b5a2eb-8cdb-4e30-bd98-fc64c79d86d7" InformativeScreenshot="9dd0a43efedd9f277cc050397cc5d1ce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Nuevo" BrowserItemId="1yGVj4dgIChoH8fXcrbXi5CmTmaP6qM15ImPg0OudTBE" Cell="[CurrentRow(&quot;Facturado&quot;).ToString]" ConnectionId="58268443-ff2a-4a59-a3cd-e9e777b6d9b3" DisplayName="Escribir celda" HideCell="False" sap:VirtualizedContainerService.HintSize="334,305" sap2010:WorkflowViewState.IdRef="WriteCellConnections_1" ItemSelectionMode="Browse" RangeLocation="NewSheet" UseConnectionService="True" WhatToWrite="[&quot;Si&quot;]">
+                                            <uga:WriteCellConnections.FileIdBackup>
+                                              <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+                                                <usau:BackupSlot.BackupValues>
+                                                  <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                                                </usau:BackupSlot.BackupValues>
+                                              </usau:BackupSlot>
+                                            </uga:WriteCellConnections.FileIdBackup>
+                                          </uga:WriteCellConnections>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Menú Principal'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComResumenDatos.do" CvElementArea="634, 653, 97, 23" CvTextArea="642, 657, 81, 14" CvTextArgument="Menu Principal" CvType="Button" DesignTimeRectangle="635, 654, 95, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Menú Principal'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='' aaname='Menú Principal' check:text='Menú Principal' /&gt;" Guid="ab33df2b-7b3e-4e8e-acf3-21c92238bf80" InformativeScreenshot="42208b56e454dc65fff9ef2fd1910d6a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="1cbbdcb80b79f7563a5d759e0154e44c.jpg" Selector="&lt;html app='chrome.exe' title='RCEL' /&gt;" Title="Nueva pestaña" Url="https://fe.afip.gob.ar/rcel/jsp/index_bis.jsp" />
+                      </uix:NApplicationCard.TargetApp>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ugas:GoogleSheetsApplicationScope.Body>
+      <ugas:GoogleSheetsApplicationScope.CredentialID>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ugas:GoogleSheetsApplicationScope.CredentialID>
+      <ugas:GoogleSheetsApplicationScope.CredentialSecret>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ugas:GoogleSheetsApplicationScope.CredentialSecret>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ugas:GoogleSheetsApplicationScope>
+  </Sequence>
+</Activity>
