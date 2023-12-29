@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="970,2297" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugas="clr-namespace:UiPath.GSuite.Activities.Sheets;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="970,2257" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugas="clr-namespace:UiPath.GSuite.Activities.Sheets;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -123,7 +123,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="856,2232" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap:VirtualizedContainerService.HintSize="856,2192" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Datos" />
       <Variable x:TypeArguments="x:Object" Name="_out_InputDialog_1__Result" />
@@ -133,13 +133,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="marianomuracegas@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="794,2121" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="Browse" SpreadsheetId="https://docs.google.com/spreadsheets/d/1yGVj4dgIChoH8fXcrbXi5CmTmaP6qM15ImPg0OudTBE/edit?usp=drivesdk" SpreadsheetName="Nuevo" UseConnectionService="False" UserEmail="marianomuracegas@gmail.com">
+    <ugas:GoogleSheetsApplicationScope ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" FileId="{x:Null}" Filename="{x:Null}" ParentFolderId="{x:Null}" ParentFolderPath="{x:Null}" Timeout="{x:Null}" Account="marianomuracegas@gmail.com" Action="UseExisting" Connector="uipath-google-sheets" DisplayName="Use Google Spreadsheet" sap:VirtualizedContainerService.HintSize="794,2081" sap2010:WorkflowViewState.IdRef="GoogleSheetsApplicationScope_2" Mode="Browse" SpreadsheetId="https://docs.google.com/spreadsheets/d/1yGVj4dgIChoH8fXcrbXi5CmTmaP6qM15ImPg0OudTBE/edit?usp=drivesdk" SpreadsheetName="Nuevo" UseConnectionService="False" UserEmail="marianomuracegas@gmail.com">
       <ugas:GoogleSheetsApplicationScope.Body>
         <ActivityAction x:TypeArguments="ugas:IGoogleSheetTarget">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ugas:IGoogleSheetTarget" Name="Spreadsheet" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="760,1840" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="760,1800" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,20 +165,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Datos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="698,1291" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Datos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="698,1251" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="664,1105" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Cuerpo" sap:VirtualizedContainerService.HintSize="664,1065" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="622,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[CurrentRow(&quot;Nombre de Archivo&quot;)]" />
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: RCEL" sap:VirtualizedContainerService.HintSize="622,836" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: RCEL" sap:VirtualizedContainerService.HintSize="622,796" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -208,7 +208,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="639,10421" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -532,6 +532,40 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
+                                    <If Condition="[CurrentRow(&quot;Medio de Pago&quot;).ToString = &quot;Otra&quot;]" DisplayName="Si" sap:VirtualizedContainerService.HintSize="577,427" sap2010:WorkflowViewState.IdRef="If_10">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="455, 371, 15, 15" CvType="CheckBox" DesignTimeRectangle="456, 372, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago7' tableRow='10' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl id='formadepago7' type='checkbox' tag='INPUT' class='' aaname='Otra ' /&gt;" Guid="9c2875f8-36a0-4dbf-8217-d48d12da1ecd" InformativeScreenshot="26c832e0a066c06a0b918f78f2c1fefc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CvTextArea="471, 374, 26, 12" CvTextArgument="Otra" CvType="Text" DesignTimeRectangle="472, 374, 25, 14" ElementType="Text" FriendlyName="'unchecked'" FullSelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl tableRow='10' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Contado Tarjeta de Débito &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Tipo *' parentid='formulario' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='Otra ' check:innerText='Otra' /&gt;" SearchSteps="FuzzySelector, CV" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                                <uix:TargetAnchorable.PointOffset>
+                                                  <uix:PointOffset Y="2" />
+                                                </uix:TargetAnchorable.PointOffset>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
                                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continuar &gt;'" sap:VirtualizedContainerService.HintSize="577,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
                                       <uix:NClick.Target>
                                         <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComDatosReceptor.do" CvElementArea="674, 709, 79, 22" CvTextArea="682, 713, 63, 12" CvTextArgument="Continuar &gt;" CvType="Button" DesignTimeRectangle="675, 710, 78, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continuar &gt;'" FullSelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='formulario' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continuar &amp;gt;' parentid='formulario' tag='INPUT' type='button' class='' check:text='Continuar &amp;gt;' /&gt;" Guid="269dd6a6-0727-46f5-9895-044195234447" InformativeScreenshot="f991d008c1b92bba832a5ee1f8bc553c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
@@ -562,10 +596,10 @@
                                         <OutArgument x:TypeArguments="x:Object">[_out_InputDialog_1__Result]</OutArgument>
                                       </ui:InputDialog.Result>
                                     </ui:InputDialog>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[_out_InputDialog_1__Result]" />
-                                    <If Condition="[_out_InputDialog_1__Result.ToString = &quot;Si&quot;]" sap:VirtualizedContainerService.HintSize="577,1608" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[_out_InputDialog_1__Result]" />
+                                    <If Condition="[_out_InputDialog_1__Result.ToString = &quot;Si&quot;]" sap:VirtualizedContainerService.HintSize="577,2321" sap2010:WorkflowViewState.IdRef="If_1">
                                       <If.Then>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376,1181" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,1894" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -589,6 +623,21 @@
                                           <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Menú Principal'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
                                             <uix:NClick.Target>
                                               <uix:TargetAnchorable BrowserURL="https://fe.afip.gob.ar/rcel/jsp/genComResumenDatos.do" CvElementArea="634, 653, 97, 23" CvTextArea="642, 657, 81, 14" CvTextArgument="Menu Principal" CvType="Button" DesignTimeRectangle="635, 654, 95, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Menú Principal'" FullSelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='contenido' tag='TABLE' /&gt;&lt;webctrl type='button' tag='INPUT' class='' aaname='Menú Principal' check:text='Menú Principal' /&gt;" Guid="82b5a2eb-8cdb-4e30-bd98-fc64c79d86d7" InformativeScreenshot="9dd0a43efedd9f277cc050397cc5d1ce.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='RCEL' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en 'Dirección: Descargas'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_12" InteractionMode="HardwareEvents" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Ubicación a Guardar&quot;).ToString + “[k(enter)]”]" Version="V3">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable CvTextArea="153, 44, 139, 15" CvTextArgument="Este equipo Descargas" CvType="Text" DesignTimeRectangle="115, 36, 950, 30" DesignTimeScaleFactor="1" ElementType="Toolbar" FriendlyName="'Dirección: Descargas'" FullSelectorArgument="&lt;wnd ctrlid='1001' title='Dirección: Descargas' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1001' title='Dirección: Descargas' check:text='Dirección: Descargas' /&gt;" Guid="1b327530-6c54-46c0-a848-36ab2dd4b56e" InformativeScreenshot="f68242a5e2163623eef7c3271e9a8cfe.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NTypeInto.Target>
+                                          </uix:NTypeInto>
+                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Escribir en '20299578543_011_00001_0…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_13" InteractionMode="HardwareEvents" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Text="[CurrentRow(&quot;Nombre Archivo&quot;).ToString]" Version="V3">
+                                            <uix:NTypeInto.Target>
+                                              <uix:TargetAnchorable CvElementArea="125, 612, 1233, 25" CvType="InputBox" DesignTimeRectangle="136, 617, 1197, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'20299578543_011_00001_0…'" FullSelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre de archivo:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre de archivo:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="d3d756ca-0b83-40a5-897d-9bee4621e73c" InformativeScreenshot="ad3a0f65be10854c8fce526500658019.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
+                                            </uix:NTypeInto.Target>
+                                          </uix:NTypeInto>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'unchecked'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_26" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4500a30b-adff-4a49-bed0-4e24dae72b6d" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable CvElementArea="1152, 681, 90, 27" CvTextArea="1174, 688, 45, 12" CvTextArgument="Guardar" CvType="Button" DesignTimeRectangle="1153, 682, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Guardar' check:text='unchecked' /&gt;" Guid="f3edf63c-5baa-4777-9478-432703c89fd8" InformativeScreenshot="aafd4127437782fc096a8b412bc77223.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" />
                                             </uix:NClick.Target>
                                           </uix:NClick>
                                           <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Nuevo" BrowserItemId="1yGVj4dgIChoH8fXcrbXi5CmTmaP6qM15ImPg0OudTBE" Cell="[CurrentRow(&quot;Facturado&quot;).ToString]" ConnectionId="58268443-ff2a-4a59-a3cd-e9e777b6d9b3" DisplayName="Escribir celda" HideCell="False" sap:VirtualizedContainerService.HintSize="334,305" sap2010:WorkflowViewState.IdRef="WriteCellConnections_1" ItemSelectionMode="Browse" RangeLocation="NewSheet" UseConnectionService="True" WhatToWrite="[&quot;Si&quot;]">
